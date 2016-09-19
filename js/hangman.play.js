@@ -1,9 +1,7 @@
-hangman.play = function() {
-
+hangman.play = function(guess, word) {
     var word = hangman.words;
+
     hangman.ui.printEmptyBoard(word);
 
-    var guess = hangman.ui.guessPrompt();
-    hangman.logic.checkInput(guess, word);
-
+    hangman.ui.prompter(guess, word);
 };
